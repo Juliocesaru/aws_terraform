@@ -8,7 +8,7 @@ resource "aws_autoscaling_group" "my_asg" {
 
   # Change-1: nlb module upgrade to 9.4.0
   #target_group_arns = module.nlb.target_group_arns
-  target_group_arns = [module.nlb.target_groups["mytg1"].arn] # UPDATED 
+ 
   
   health_check_type = "EC2"
   #health_check_grace_period = 300 # default is 300 seconds  
