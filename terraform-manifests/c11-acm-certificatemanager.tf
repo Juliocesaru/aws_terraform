@@ -4,9 +4,6 @@ module "acm" {
   #version = "2.14.0"
   #version = "3.0.0"
   version = "5.0.0"
-  
-  domain_name  = trimsuffix(data.aws_route53_zone.mydomain.name, ".")
-  zone_id      = data.aws_route53_zone.mydomain.zone_id 
 
   subject_alternative_names = [
     "*.devopsincloud.com"
